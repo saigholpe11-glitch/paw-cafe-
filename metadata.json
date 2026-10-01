@@ -1,0 +1,8 @@
+{
+  "name": "Paws & Whiskers Cafe Noida",
+  "description": "Pet-friendly cafe in Sector 12, Noida open since 2016. Meet resident rescue dogs and cats while enjoying artisanal coffee and delicious bites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
