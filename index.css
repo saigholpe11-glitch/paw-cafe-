@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Fredoka', cursive, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Horizontal flowing side deck animation (flowing right to left) */
+@keyframes flow-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-flow-left {
+  display: flex;
+  width: max-content;
+  animation: flow-left 44s linear infinite;
+  will-change: transform;
+}
+
+.animate-flow-left:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Washi tape & push pin collage effects for the Reviews & Polaroid cards */
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 86px;
+  height: 22px;
+  background-color: rgba(254, 240, 138, 0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 2px dashed rgba(202, 138, 4, 0.4);
+  border-right: 2px dashed rgba(202, 138, 4, 0.4);
+  z-index: 10;
+}
+
+.washi-tape-cyan {
+  background-color: rgba(186, 230, 253, 0.95);
+  border-left: 2px dashed rgba(2, 132, 199, 0.4);
+  border-right: 2px dashed rgba(2, 132, 199, 0.4);
+}
+
+.washi-tape-pink {
+  background-color: rgba(254, 205, 211, 0.95);
+  border-left: 2px dashed rgba(225, 29, 72, 0.4);
+  border-right: 2px dashed rgba(225, 29, 72, 0.4);
+}
+
+.push-pin-red {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #ef4444, #b91c1c);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+}
+
+.push-pin-blue {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #0284c7, #0369a1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+}
+
+/* Hide scrollbar for horizontal gallery */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
